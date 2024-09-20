@@ -19,24 +19,24 @@
 
 https://huggingface.co/datasets/jayavibhav/prompt-injection
 
-262k rows -> Train
-65.4k rows -> Test
+262k rows -> Train  
+65.4k rows -> Test  
 
-Labels - 0, 1 
+Labels - 0, 1  
 
 For Train
-0 50.6% -> 146 720
-1 49%% -> 128 380
+0 50.6% -> 146 720  
+1 49%% -> 128 380  
 
 For Test
-0 50.6% -> 33 092
-1 49.4% -> 32 046
+0 50.6% -> 33 092  
+1 49.4% -> 32 046  
 
 https://huggingface.co/datasets/jayavibhav/prompt-injection-safety
 50k rows -> Train
 10k rows -> Test
 
-Labels - 0, 1, 2 
+Labels - 0, 1, 2  
 
 For Train
 0 46% -> 23k
