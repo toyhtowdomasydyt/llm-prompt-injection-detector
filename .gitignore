@@ -329,3 +329,6 @@ pyrightconfig.json
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,linux,python,visualstudiocode,jetbrains+all
+
+# Ignore large artifacts
+artifacts/step-1/classic-ml-ms-deberta-v3-base/*
