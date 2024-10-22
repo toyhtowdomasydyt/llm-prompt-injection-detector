@@ -5,7 +5,7 @@
 1. METHOD 1 - Classification Using Traditional ML
 2. METHOD 2 - Classification Using a Pre-trained LLM (XLM-RoBERTa or BERT based to compare)
 3. METHOD 3 - Classification Using a Fine-tuned LLM (XLM-RoBERTa or BERT based to compare)
-4. METHOD 4 - Huggingface models
+4. METHOD 4 - Huggingface models (ready models specialized for prompt injection detection)
 5. METHOD 5 - Classification Using a Pre-trained LLM (Llama/ChatGPT etc)
 6. METHOD 6 - Classification Using a Fine-tuned LLM (Llama/ChatGPT etc)
 
@@ -63,19 +63,29 @@ For Test
 0 68% -> 1400
 1 32% -> 659
 
-#### Method 1
+#### Method 1, 2, 3
 
 Used models from HuggingFace:
 
 1. Default model - distilbert/distilbert-base-uncased-finetuned-sst-2-english
-2. Trained model - protectai/deberta-v3-base-prompt-injection
+2. Distil roberta - distilbert/distilroberta-base
 3. Base model - microsoft/deberta-v3-base
-5. Base model - FacebookAI/roberta-base
-6. Base model - FacebookAI/xlm-roberta-base
+
+Under consideration 
+1. Base model - FacebookAI/roberta-base
+2. Base model - FacebookAI/xlm-roberta-base
 
 First zero shots classifications are in [zero_shot_classification.ipynb](./zero_shot_classification.ipynb)
 
+#### Method 4
+
+1. Protect AI model - protectai/deberta-v3-base-prompt-injection-v2
+2. Facebook model - meta-llama/Prompt-Guard-86M
+3. Acuvity Inc - acuvity/distilbert-base-uncased-prompt-injection-v0.1
+
+Under consideration 
+4. *jailbreakDetector-v6 (if get approve by author) - markush1/jailbreakDetector-v6
+
 #### Method 5
 
-llama pretrained model for prompt injection detection 
-- Pre Trained model - meta-llama/Prompt-Guard-86M
+LLMs like GPT, LLama, Phi 
