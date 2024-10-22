@@ -1,0 +1,52 @@
+{
+  "builder_name": "parquet",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "prompt-injection",
+  "dataset_size": 125423433,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/jayavibhav/prompt-injection@a5bd9869c16d22ffebda9fa91a13a759b8669bb6/data/train-00000-of-00001.parquet": {
+      "num_bytes": 61811246,
+      "checksum": null
+    },
+    "hf://datasets/jayavibhav/prompt-injection@a5bd9869c16d22ffebda9fa91a13a759b8669bb6/data/test-00000-of-00001.parquet": {
+      "num_bytes": 15491577,
+      "checksum": null
+    }
+  },
+  "download_size": 77302823,
+  "features": {
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "label": {
+      "dtype": "int64",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 202726256,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 100328481,
+      "num_examples": 261738,
+      "dataset_name": "prompt-injection"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 25094952,
+      "num_examples": 65416,
+      "dataset_name": "prompt-injection"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}
