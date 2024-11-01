@@ -332,3 +332,7 @@ pyrightconfig.json
 
 # Ignore large artifacts
 artifacts/step-1-classic-ml/*
+artifacts/step-3-finetune/*
+
+# PyArrow cache
+cache-*.arrow
