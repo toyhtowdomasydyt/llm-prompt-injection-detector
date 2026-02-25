@@ -80,13 +80,13 @@ This project runs different models with varying computational requirements. The 
 - **Recommended**: 1x RTX 4090 (24GB VRAM) or 1x A40 (48GB VRAM)
 - RAM: 16GB system RAM
 
-**Method 5, 6 - Large Language Models**
+**Method 5 - Large Language Models**
 
-- Models: Llama 2 (7B/13B), Phi, GPT-4o-mini
-- **For 7B models**: 1x RTX 4090 (24GB VRAM) or 1x A40 (48GB VRAM)
-- **For 13B+ models**: 2x A40 (48GB VRAM each) or 1x H100 (80GB VRAM)
-- **For fine-tuning 7B+**: 2x RTX 4090 or 1x H100 with 80GB VRAM
-- RAM: 32GB+ system RAM
+- Models: GPT-5-nano (API), Phi-3-mini-4k-instruct
+- **For Phi-3-mini (3.8B)**: 1x RTX 3060 (12GB VRAM) or equivalent
+- **Recommended**: 1x RTX 4090 (24GB VRAM) or 1x A40 (48GB VRAM)
+- **For GPT-5-nano**: OpenAI API access only (no local GPU needed)
+- RAM: 16GB+ system RAM
 
 #### Local Development
 
@@ -125,11 +125,10 @@ uv run jupyter notebook
 ### Steps of training and gaining results
 
 1. METHOD 1 - Classification Using Traditional ML
-2. METHOD 2 - Classification Using a Pre-trained LLM (XLM-RoBERTa or BERT based to compare)
-3. METHOD 3 - Classification Using a Fine-tuned LLM (XLM-RoBERTa or BERT based to compare)
+2. METHOD 2 - Classification Using a Pre-trained LLM (BERT-based models)
+3. METHOD 3 - Classification Using a Fine-tuned LLM (BERT-based models)
 4. METHOD 4 - Huggingface models (ready models specialized for prompt injection detection)
-5. METHOD 5 - Classification Using a Pre-trained LLM (Llama/ChatGPT etc)
-6. METHOD 6 - Classification Using a Fine-tuned LLM (Llama/ChatGPT etc)
+5. METHOD 5 - Classification Using a Large Language Model (GPT-5-nano, Phi-3)
 
 #### Dateset which will be used in finetune
 
@@ -193,21 +192,15 @@ Used models from HuggingFace:
 2. Distil roberta - distilbert/distilroberta-base
 3. Base model - microsoft/deberta-v3-base
 
-Under consideration
-
-1. Base model - FacebookAI/roberta-base
-2. Base model - FacebookAI/xlm-roberta-base
-
-First zero shots classifications are in [zero_shot_classification.ipynb](./zero_shot_classification.ipynb)
-
 #### Method 4
 
 1. Protect AI model - protectai/deberta-v3-base-prompt-injection-v2
 2. Facebook model - meta-llama/Prompt-Guard-86M
 3. Acuvity Inc - acuvity/distilbert-base-uncased-prompt-injection-v0.1
 
-Under consideration 4. \*jailbreakDetector-v6 (if get approve by author) - markush1/jailbreakDetector-v6
-
 #### Method 5
 
-LLMs like GPT, LLama, Phi
+Used models:
+
+1. OpenAI GPT-5-nano - `gpt-5-nano` (via OpenAI API)
+2. Microsoft Phi-3-mini - microsoft/Phi-3-mini-4k-instruct
